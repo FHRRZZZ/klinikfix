@@ -98,6 +98,8 @@ public class PasienPanel extends javax.swing.JFrame {
         txtAlamat.setRows(5);
         jScrollPane1.setViewportView(txtAlamat);
 
+        btnTambah.setBackground(new java.awt.Color(0, 204, 204));
+        btnTambah.setForeground(new java.awt.Color(255, 255, 255));
         btnTambah.setText("Tambah");
         btnTambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -105,10 +107,16 @@ public class PasienPanel extends javax.swing.JFrame {
             }
         });
 
+        btnEdit.setBackground(new java.awt.Color(0, 204, 204));
+        btnEdit.setForeground(new java.awt.Color(255, 255, 255));
         btnEdit.setText("Edit");
 
+        btnHapus.setBackground(new java.awt.Color(204, 204, 0));
+        btnHapus.setForeground(new java.awt.Color(255, 255, 255));
         btnHapus.setText("Hapus");
 
+        btnClear.setBackground(new java.awt.Color(0, 153, 255));
+        btnClear.setForeground(new java.awt.Color(255, 255, 255));
         btnClear.setText("Clear");
 
         jLabel1.setText("Masukan Nama");
@@ -145,9 +153,16 @@ public class PasienPanel extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("CareSynce");
 
+        jPanel4.setBackground(new java.awt.Color(0, 153, 153));
+
         jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Pasien");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -166,6 +181,11 @@ public class PasienPanel extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setText("Dokter");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -184,6 +204,11 @@ public class PasienPanel extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 153, 153));
         jLabel8.setText("Janji Temu");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -220,6 +245,11 @@ public class PasienPanel extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 153, 153));
         jLabel11.setText("Home");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -408,6 +438,26 @@ public class PasienPanel extends javax.swing.JFrame {
     private void txtJenisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtJenisActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtJenisActionPerformed
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        new index().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        new PasienPanel().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        new DokterPanel().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        new JanjiTemuPanel().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel8MouseClicked
 
     private void initTable() {
         tableModel = new DefaultTableModel(

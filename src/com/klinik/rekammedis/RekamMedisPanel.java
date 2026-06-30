@@ -17,7 +17,7 @@ import com.klinik.ui.panel.index;
 import com.klinik.pasien.PasienPanel;
 import com.klinik.dokter.DokterPanel;
 import com.klinik.janjitemu.JanjiTemuPanel;
-
+import com.klinik.rekammedis.RekamMedisPanel;
 public class RekamMedisPanel extends javax.swing.JFrame {
     Connection conn;
     private int selectedId = 0;
@@ -164,7 +164,6 @@ public class RekamMedisPanel extends javax.swing.JFrame {
         jScrollPane3.setViewportView(jTable1);
 
         jButton1.setBackground(new java.awt.Color(0, 204, 51));
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
         jButton1.setText("Tambah");
         jButton1.setPreferredSize(new java.awt.Dimension(84, 27));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -174,17 +173,14 @@ public class RekamMedisPanel extends javax.swing.JFrame {
         });
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
-        jButton2.setForeground(new java.awt.Color(0, 0, 0));
         jButton2.setText("Hapus");
         jButton2.setPreferredSize(new java.awt.Dimension(84, 27));
 
         jButton3.setBackground(new java.awt.Color(255, 255, 0));
-        jButton3.setForeground(new java.awt.Color(0, 0, 0));
         jButton3.setText("Edit");
         jButton3.setPreferredSize(new java.awt.Dimension(84, 27));
 
         jButton4.setBackground(new java.awt.Color(51, 153, 255));
-        jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("Bersihkan");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,6 +200,11 @@ public class RekamMedisPanel extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 153, 153));
         jLabel11.setText("Home");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -224,6 +225,11 @@ public class RekamMedisPanel extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 153, 153));
         jLabel6.setText("Pasien");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -244,6 +250,11 @@ public class RekamMedisPanel extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 153, 153));
         jLabel7.setText("Dokter");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -264,6 +275,11 @@ public class RekamMedisPanel extends javax.swing.JFrame {
         jLabel8.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(0, 153, 153));
         jLabel8.setText("Janji Temu");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -284,6 +300,11 @@ public class RekamMedisPanel extends javax.swing.JFrame {
         jLabel9.setFont(new java.awt.Font("Segoe UI Black", 1, 12)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(0, 153, 153));
         jLabel9.setText("Rekam Medis");
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -377,7 +398,7 @@ public class RekamMedisPanel extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -393,13 +414,10 @@ public class RekamMedisPanel extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jLabel2))
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
@@ -509,6 +527,31 @@ public class RekamMedisPanel extends javax.swing.JFrame {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        new index().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel11MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        new PasienPanel().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        new DokterPanel().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        new JanjiTemuPanel().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        new RekamMedisPanel().setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel9MouseClicked
 
     /**
      * @param args the command line arguments
