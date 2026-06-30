@@ -3,3 +3,4 @@ dist/
 *.class
 nbproject/private/
 target/
+.env
